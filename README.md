@@ -3,6 +3,7 @@
 
 ## Стек технологий 
 **Back**: Node.js, Express
+
 **DB**: PostgreSQL, Sequelize ORM
 
 ## Главная страница 
