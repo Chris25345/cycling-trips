@@ -1,0 +1,35 @@
+<div "mb-3">
+
+  <div class="navbar">
+     <h1><a href="/" style="color: indigo">Велопрогулки</a></h1>
+  </div>
+
+  <div>
+    <h3><a href="/personal/create" style="color: indigo">Создание маршрута</a></h3>
+    <h3><a href="/personal/myRouds" style="color: indigo">Построенные маршруты</a></h3>
+  </div>
+
+  <form method="post" action="/personal/create" id="createMap">
+    <label for="title-input_1" class="block mar-b-1">Название маршрута:</label>
+    <input id="title-input" name="nameRoute" type="text" tabindex="1"
+      class="block w-100 no-outline no-border pad-1 mar-b-2">
+      
+    <label for="title-input_2" class="block mar-b-1">Населённый пункт:</label>
+    <input id="title-input" name="crowdedPoint" type="text" tabindex="1"
+      class="block w-100 no-outline no-border pad-1 mar-b-2">
+
+    <label for="title-input_2" class="block mar-b-1">Расстояние</label>
+    <input id="title-input" name="lengthRoute" type="text" tabindex="1"
+      class="block w-100 no-outline no-border pad-1 mar-b-2">
+
+    <div>
+      <div id="map" style="width: 100%; height: 600px" ></div>
+    </div>
+
+    <input type="hidden" name="routePoints" class="js-route-points" data-start-x="null" data-finish-x="null" data-start-y="null" data-finish-y="null"  />
+
+    <input type="submit" value="Создать" tabindex="3"
+      class="block button w-100 mar-t-4 mar-b-3 pad-2 round-1 text-c center no-border no-outline">
+  </form>
+
+</div>

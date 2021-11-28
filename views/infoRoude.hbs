@@ -1,0 +1,19 @@
+{{!-- Подробная информация об маршруте --}}
+<div class="navbar">
+   <h1><a href="/" style="color: indigo">Велопрогулки</a></h1>
+</div>
+
+{{#if nameRoute}} {{!-- Неавторизованный пользователь --}}
+<h1>{{nameRoute}}</h1>
+<dev>
+  <h2>Основная информация об маршруте:</h2>
+  {{!-- <p>Длина: {{lengthRoute}} km</p> --}}
+  <p>Населенный пункт: {{crowdedPoint}}</p>
+  <p>Начальная точка: {{startPoint}}</p>
+  <p>Конечная точка: {{finishPoint}}</p>
+</dev>
+<div>
+  <div id="map_2" style="width: 100%; height: 600px"></div>
+  <input type="hidden" class="js-route-points" data-start-point="{{startPoint}}" data-finish-point="{{finishPoint}}" />
+</div>
+{{/if}}

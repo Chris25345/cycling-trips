@@ -1,0 +1,33 @@
+<div class="navbar">
+  <h1><a href="/" style="color: indigo">Велопрогулки</a></h1>
+  <div class="nav justify-content-end">
+    {{#if username}}
+    <a href="/logout" style="margin: 5px; color: indigo">Выйти</a>
+    <a href="/personal/create" style="margin: 5px; color: indigo">Личный кабинет</a>
+    {{else}}
+    <a href="/login" style="margin: 5px; color: indigo">Войти</a>
+    <a href="/register" style="margin: 5px; color: indigo">Регистрация</a>
+    {{/if}}
+  </div>
+</div>
+
+
+<div id="conteinerCardsMain">
+  <div style="display: flex; flex-direction: row; flex-wrap: wrap">
+    {{#each routes}}
+    {{!-- <a href="/infoRoude/{{id}}" style="margin: 7px"> --}}
+      <div class="card" style="width: 15rem; border-radius: 15px">
+        {{!-- <img src="https://mamul.am/images/pics/sramit-u-naev-dipuk--u51093-1.jpg" class="card-img-top" alt="...">
+        --}}
+        <div id="map_preview_{{id}}" class="js-map-preview" style="width: 237.5px; height: 275px"></div>
+        <input type="hidden" id="map_preview_points_{{id}}" data-start-point="{{startPoint}}"
+          data-finish-point="{{finishPoint}}" />
+
+    <a href="/infoRoude/{{id}}" style="margin: 7px">
+        <div class="card-body">
+          <h6 class="card-title">{{nameRoute}} </h6>
+        </div>
+      </div>
+    </a>
+    {{/each}}
+  </div>

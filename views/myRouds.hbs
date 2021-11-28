@@ -1,0 +1,43 @@
+<div class="navbar">
+ <h1><a href="/" style="color: indigo">Велопрогулки</a></h1>
+</div>
+
+<div>
+   <h3><a href="/personal/create" style="color: indigo">Создание маршрута</a></h3>
+   <h3><a href="/personal/myRouds" style="color: indigo">Построенные маршруты</a></h3>
+</div>
+
+{{!-- {{#each userRoudes}}
+ <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+    <img src="#">
+      <div class="card-body">
+        <h5 class="card-title">{{this.nameRoute}}</h5>
+        <p class="card-text">{{this.crowdedPoint}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}} --}}
+
+<div id="conteinerCardsMain">
+  <div style="display: flex; flex-direction: row; flex-wrap: wrap">
+    {{#each userRoudes}}
+    {{!-- <a href="/infoRoude/{{id}}" style="margin: 7px"> --}}
+      <div class="card" style="width: 15rem; border-radius: 15px">
+        {{!-- <img src="https://mamul.am/images/pics/sramit-u-naev-dipuk--u51093-1.jpg" class="card-img-top" alt="...">
+        --}}
+        <div id="map_preview_{{id}}" class="js-map-preview" style="width: 237.5px; height: 275px"></div>
+        <input type="hidden" id="map_preview_points_{{id}}" data-start-point="{{startPoint}}"
+          data-finish-point="{{finishPoint}}" />
+      <a href="/infoRoude/{{id}}" style="margin: 7px">
+        <div class="card-body">
+          <h6 class="card-title">{{nameRoute}}</h6>
+          {{!-- <p class="card-text">{{this.crowdedPoint}}</p> --}}
+          {{!-- <p class="card-text">{{lengthRoute}} km</p> --}}
+        </div>
+      </div>
+    </a>
+    {{/each}}
+  </div>
